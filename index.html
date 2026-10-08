@@ -3,39 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Jonnathan Javier Rosero Portilla - Portfolio</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 2rem; max-width: 800px; }
-        header { border-bottom: 2px solid #eee; padding-bottom: 1rem; }
-        section { margin: 2rem 0; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 0.5rem; }
-        a { color: #0366d6; text-decoration: none; }
+        :root {
+            --primary-color: #0d6efd;
+            --dark-color: #212529;
+            --light-bg: #f8f9fa;
+            --border-color: #e9ecef;
+            --text-muted: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-bg);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+        }
+
+        header p.title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+            color: var(--dark-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .item {
+            margin-bottom: 1.2rem;
+        }
+
+        .item h3 {
+            font-size: 1.1rem;
+            color: var(--dark-color);
+        }
+
+        .item .meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.3rem;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.3rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Jonnathan Javier Rosero Portilla</h1>
-        <p>Software Developer / Designer</p>
-    </header>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Jonnathan Javier Rosero Portilla</h1>
+            <p class="title">Systems Engineer</p>
+            <div class="contact-info">
+                <span>📍 Pasto, Nariño, Colombia</span>
+                <span>📧 <a href="mailto:jj.rosero@hotmail.com">jj.rosero@hotmail.com</a></span>
+                <span>📞 +57 312 7922374</span>
+            </div>
+        </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I build web applications and enjoy solving complex problems.</p>
-    </section>
+        <!-- Professional Profile / About -->
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Systems Engineer with strong communication skills, adaptability for teamwork, and high organizational capabilities[cite: 1.4]. Experienced in software development, platforms maintenance, and web engineering[cite: 1.4]. Adept at prioritizing tasks, working under pressure, and continuously seeking self-improvement and technical training[cite: 1.4].
+            </p>
+        </section>
 
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Project 1:</strong> A brief description of what this project does. [<a href="#">GitHub</a>]</li>
-            <li><strong>Project 2:</strong> Another cool project description. [<a href="#">Live Demo</a>]</li>
-        </ul>
-    </section>
+        <!-- Technical Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">C#</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <div class="tags">
+                        <span class="tag">Django</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Spring</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Git & GitHub</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web & Frontend</h3>
+                    <div class="tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">WordPress</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases & Cloud</h3>
+                    <div class="tags">
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Oracle</span>
+                        <span class="tag">SQLite</span>
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">Heroku</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-    </section>
+        <!-- Professional Experience -->
+        <section>
+            <h2>Work Experience</h2>
+            
+            <div class="item">
+                <h3>Systems Coordinator – AUTODENAR S.A.</h3>
+                <div class="meta">Pasto, Colombia | Oct 2016 – Jul 2018</div>
+                <ul>
+                    <li>Developed custom software solutions according to organizational needs[cite: 1.4].</li>
+                    <li>Provided support for Chevrolet brand platforms[cite: 1.4].</li>
+                    <li>Maintained software and hardware infrastructure for company computers[cite: 1.4].</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Web Designer – FUNDESSERE</h3>
+                <div class="meta">Pasto, Colombia | Jul 2015 – Aug 2015</div>
+                <ul>
+                    <li>Designed and developed the official website[cite: 1.4].</li>
+                    <li>Managed and updated website content[cite: 1.4].</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Maintenance Technician – TELEINCO</h3>
+                <div class="meta">Pasto, Colombia | Feb 2015 – Jul 2015</div>
+                <ul>
+                    <li>Performed hardware and software maintenance on computer equipment[cite: 1.4].</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <div class="item">
+                <h3>Master's Degree in Systems and Computer Engineering</h3>
+                <div class="meta">Universidad de Nariño | In progress</div>
+            </div>
+            <div class="item">
+                <h3>Bachelor of Science in Systems Engineering</h3>
+                <div class="meta">Universidad CESMAG | Graduated</div>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section>
+            <h2>Languages</h2>
+            <ul>
+                <li><strong>English:</strong> Fluent / Advanced[cite: 1.2, 1.4]</li>
+                <li><strong>German:</strong> Lower Intermediate[cite: 1.2]</li>
+                <li><strong>Spanish:</strong> Native[cite: 1.2]</li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
